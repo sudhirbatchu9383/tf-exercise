@@ -1,0 +1,10 @@
+# Terraform files
+*.tfstate
+*.tfstate.backup
+*.tfvars
+*.tfplan
+*.tfstate.*
+.terraform/
+
+# Ignore .git directories
+.git/

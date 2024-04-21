@@ -8,3 +8,4 @@
 
 # Ignore .git directories
 .git/
+.DS_Store

@@ -34,12 +34,12 @@ jobs:
     
     - name: Terraform Init
       run: terraform init -backend-config=backend.conf
-      working-directory: regions/us-east-1/qa/  # Replace with your Terraform code directory
+      working-directory: ./
 
     - name: Terraform Validate
       run: terraform validate
-      working-directory: regions/us-east-1/qa/
+      working-directory: ./
 
     - name: Terraform Plan -var-file="input.tfvars"
       run: terraform plan
-      working-directory: regions/us-east-1/qa/
+      working-directory: ./

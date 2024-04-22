@@ -20,7 +20,6 @@ module "ec2" {
 
 module "s3" {
   source = "./modules/s3"
-  aws_region = var.region
   bucket_name = var.bucket_name
   versioning = var.versioning
   block_public_access = {

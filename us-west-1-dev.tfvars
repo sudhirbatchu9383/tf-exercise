@@ -6,7 +6,7 @@ environment = "dev"
 instance_type = "t1.micro"
 lambda_function_name = "func-12345"
 lambda_handler = "python3.6"
-lambda_zip_path = "C:/Users/SudhirBatchu(AppDevS/Downloads/Terraform-LabExercise/Terraform-LabExercise/modules/lambda_package.zip"
+lambda_zip_path = "./modules/lambda_package.zip"
 runtime = "python3.9"
 availability_zones = ["us-west-1a", "us-west-1c"]
 

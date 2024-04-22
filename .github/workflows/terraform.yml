@@ -41,5 +41,5 @@ jobs:
       working-directory: ./
 
     - name: Terraform Plan 
-      run: terraform plan -var-file="input.tfvars"
+      run: terraform plan -var-file=input.tfvars
       working-directory: ./

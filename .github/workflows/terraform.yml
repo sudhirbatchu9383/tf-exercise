@@ -45,7 +45,7 @@ jobs:
         pip install checkov
 
     - name: Run Checkov
-      run: checkov --directory .
+      run: checkov --directory . --framework terraform
 
     - name: Terraform Plan 
       run: terraform plan -var-file=us-west-1-dev.tfvars

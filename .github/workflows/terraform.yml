@@ -40,6 +40,13 @@ jobs:
       run: terraform validate
       working-directory: ./
 
+    - name: Install Checkov
+      run: |
+        pip install checkov
+
+    - name: Run Checkov
+      run: checkov --directory .
+
     - name: Terraform Plan 
       run: terraform plan -var-file=us-west-1-dev.tfvars
       working-directory: ./

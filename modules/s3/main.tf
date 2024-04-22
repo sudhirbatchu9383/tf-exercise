@@ -1,6 +1,6 @@
 resource "aws_s3_bucket" "bucket" {
   bucket = var.bucket_name
-  region = var.aws_region
+  # region = var.aws_region
 
   tags = {
     Name        = "MyS3Bucket"

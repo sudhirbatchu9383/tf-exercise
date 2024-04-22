@@ -3,14 +3,14 @@ provider "aws" {
 }
 
 module "network" {
-  source = "../../../modules/network"
+  source = "modules/network"
   vpc_cidr = var.vpc_cidr
   subnet_cidrs = var.subnet_cidrs
   security_groups = var.security_groups
 }
 
 module "ec2" {
-  source = "../../../modules/ec2"
+  source = "modules/ec2"
   instance_type = var.instance_type
   ami = var.ami
   subnet_id = module.network.subnet_ids[0]
@@ -19,7 +19,7 @@ module "ec2" {
 }
 
 module "s3" {
-  source = "../../../modules/s3"
+  source = "modules/s3"
   aws_region = var.region
   bucket_name = var.bucket_name
   versioning = var.versioning
@@ -32,7 +32,7 @@ module "s3" {
 }
 
 module "lambda" {
-  source = "../../../modules/lambda"
+  source = "modules/lambda"
   lambda_function_name = var.lambda_function_name
   lambda_zip_path      = var.lambda_zip_path
   # s3_bucket_name = module.s3.bucket_id
